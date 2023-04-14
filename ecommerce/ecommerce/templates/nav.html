@@ -1,139 +1,164 @@
 {% load static %}
 <html>
-    <head><title>
-        {% block title %}
-        {% endblock %}
-    </title>
-    </head>
-    <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
-<body>
+  <head>
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}" />
+  <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#"
+          ><img
+            id="logo"
+            src="{% static 'images/logo3.png' %}"
+            alt="Logo"
+            draggable="false"
+            height="50"
+        /></a>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="#"><img id="logo"
-          src="{% static 'images/logo3.png' %}" alt="Logo"
-          draggable="false" height="50" /></a>
-  
-      <!-- Toggle button -->
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-  
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Left links -->
-        <ul class="navbar-nav me-3">
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" aria-current="page" href="#"><i
-                class="fas fa-bars pe-2"></i>Departments</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" aria-current="page" href="#"><i
-                class="fas fa-bars pe-2"></i>Services</a>
-          </li>
-        </ul>
-        <!-- Left links -->
-  
-        <form class="d-flex align-items-center w-100 form-search">
-          <div class="input-group">
-            <input type="search" class="search-input form-control" placeholder="Search" aria-label="Search" />
-          </div>
-          <a href="#!" class="text-white"><i class="fas fa-search ps-3"></i></a>
-        </form>
-  
-        <ul class="navbar-nav ms-3">
-          <li class="nav-item me-3">
-            <a class="nav-link d-flex align-items-center" href="#!">My Items</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link d-flex align-items-center me-3" href="#!">
-              <i class="fas fa-bookmark pe-2"></i>Account
-            </a>
-          </li>
-          <li class="nav-item" style="width: 65px;">
-            <a class="nav-link d-flex align-items-center" href="#!">Cart</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Collapsible wrapper -->
-    </div>
-    <!-- Container wrapper -->
-    
-  </nav>
-  <!-- Navbar -->
-  {% comment %} <hr class="hr"> {% endcomment %}
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <a class="nav-link active d-flex align-items-center" aria-current="page" href="#"><i
-        class="fas fa-bars pe-2"></i>How do you want your items</a>
-      
         <!-- Toggle button -->
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-      </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
 
-        <div class="nav-2 collapse navbar-collapse ">
-        <ul class="navbar-nav me-3">
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Wuse Zone 5, Abuja</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Wuse Shopping Plaza</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav me-3">
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Deals</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center"  href="#"><i
-                class="fas fa-bars pe-2"></i>Easter</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Grocery / essentials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center"  href="#"><i
-                class="fas fa-bars pe-2"></i>Tech</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Fashion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Auto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Registry</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active d-flex align-items-center" href="#"><i
-                class="fas fa-bars pe-2"></i>Walmat+</a>
-          </li>
-        </ul>
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left links -->
+          <ul class="navbar-nav me-3">
+            <li class="nav-item">
+              <a
+                class="nav-link active d-flex align-items-center"
+                aria-current="page"
+                href="{% url 'signup' %}"
+                ><i class="fas fa-bars pe-2"></i>Signup</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active d-flex align-items-center"
+                aria-current="page"
+                href="{% url 'login' %}"
+                ><i class="fas fa-bars pe-2"></i>Login</a
+              >
+            </li>
+          </ul>
+          <!-- Left links -->
+
+          <form class="d-flex align-items-center w-100 form-search">
+            <div class="input-group">
+              <input
+                type="search"
+                class="search-input form-control"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </div>
+            <a href="#!" class="text-white"
+              ><i class="fas fa-search ps-3"></i
+            ></a>
+          </form>
+
+          <ul class="navbar-nav ms-3">
+            <li class="nav-item me-3">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="{% url 'checkout' %}"
+                >Checkout</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center me-3" href="#!">
+                <i class="fas fa-bookmark pe-2"></i>Account
+              </a>
+            </li>
+            <li class="nav-item" style="width: 65px">
+              <a
+                class="nav-link d-flex align-items-center"
+                href="{% url 'cart' %}"
+                >Cart</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Collapsible wrapper -->
       </div>
-    </div>
-  </nav>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    {% comment %}
+    <hr class="hr" />
+    {% endcomment %}
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a
+          class="nav-link active d-flex align-items-center"
+          aria-current="page"
+          href="{% url 'shop' %}"
+          ><i class="fas fa-bars pe-2"></i>How do you want your items</a
+        >
 
-  <script src="{% static 'script/bootstrap.js' %}"></script>
-</body>
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
 
+        <div class="nav-2 collapse navbar-collapse">
+          <ul class="navbar-nav me-3"></ul>
+          <ul class="navbar-nav me-3">
+            <li class="nav-item">
+              <a
+                class="nav-link active d-flex align-items-center"
+                href="{% url 'shop' %}"
+                ><i class="fas fa-bars pe-2"></i>Shop</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active d-flex align-items-center"
+                href="{% url 'home' %}"
+                ><i class="fas fa-bars pe-2"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active d-flex align-items-center" href="#"
+                ><i class="fas fa-bars pe-2"></i>Blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active d-flex align-items-center" href="#"
+                ><i class="fas fa-bars pe-2"></i>Fashion</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active d-flex align-items-center" href="#"
+                ><i class="fas fa-bars pe-2"></i>Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script src="{% static 'script/bootstrap.js' %}"></script>
+  </body>
 </html>
