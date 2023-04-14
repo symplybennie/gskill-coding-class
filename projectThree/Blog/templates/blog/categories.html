@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content%}
+
+    <h1>My Categories {{f}} Page</h1>
+    <p>Below are the list of categories</p>
+
+    <ul>
+        {% for group in groups %}
+            <li>{{group.category}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

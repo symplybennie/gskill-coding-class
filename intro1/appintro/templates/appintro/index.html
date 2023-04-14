@@ -1,0 +1,35 @@
+{% extends 'main.html' %} 
+{% block content %}
+{% load static %}
+
+        {% if years_old > 20 %}
+            <h1>Welcome, you can study PHP</h1>
+        {% elif years_old > 25 %}
+            <h1>You can study python</h1>
+        {% else %}
+            <h1>You can study Javascript</h1>
+        {% endif %}
+
+        {% comment %} <img src="{% static 'images/wallpaper.jpg' %}" /> {% endcomment %}
+        <h1 style="color: aqua;">Welcome to My {{msg}}</h1>
+        
+        <h5>This Page talks about me </h5>
+        <p class="span">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            natus eos consequuntur vitae, consectetur mollitia praesentium quae
+            obcaecati voluptates nulla eligendi temporibus, ipsam, iste delectus
+            repudiandae amet libero. Dolore, rerum?
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            natus eos consequuntur vitae, consectetur mollitia praesentium quae
+            obcaecati voluptates nulla eligendi temporibus, ipsam, iste delectus
+            repudiandae amet libero. Dolore, rerum?
+        </p>
+        <h5>student record</h5>
+        <ul>
+            {% for student in student_data %}
+                {% if student.score > 70 %}
+                <li>Student {{student.id}} is {{student.name}} studying {{student.course}}, with {{student.score}}% score </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+{% endblock %}

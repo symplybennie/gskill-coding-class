@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<h1>My Blog Page</h1>
+    {% for post in posts %}
+    <div>
+        <p><b>{{post.title}}</b></p>
+        <p><i>{{post.author}}, {{post.date_posted}}</i></p>
+        <p>{% lorem 1 b random %}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

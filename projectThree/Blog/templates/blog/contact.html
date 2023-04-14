@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<h1>My Contact Page</h1>
+    <div>
+        <h3>Contact Us with the following address:</h3>
+        <p>Location: {{contacts.location}}</p>
+        <p>City: {{contacts.city}}</p>
+        <p>Phone: {{contacts.phone}}</p>
+    </div>
+{% endblock %}

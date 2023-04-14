@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+        <h1 style="Color: Red">Welcome to My Student page</h1>
+        <h5>This Page talks about me</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            natus eos consequuntur vitae, consectetur mollitia praesentium quae
+            obcaecati voluptates nulla eligendi temporibus, ipsam, iste delectus
+            repudiandae amet libero. Dolore, rerum?
+        </p>
+        <h5>student record {{studs.name}} </h5>
+         <p>Student {{studs.id}} is {{studs.name}} studying {{studs.course}}, with {{studs.score}}% score </p>
+        <ul>
+            {% for stud in studs %}
+            <li>Student<a href="/student/{{studs.id}}">{{studs.name}}</a></li>
+            {% endfor %}
+        </ul>
+{% endblock %}=

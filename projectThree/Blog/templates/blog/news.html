@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<h1>My News Page</h1>
+<div>
+    <p><b>{{news.title}}</b></p>
+    <p><i>{{news.description}}, {{news.date_posted}}</i></p>
+    <p>{% lorem 1 b random %}</p>
+</div>
+{% endblock %}

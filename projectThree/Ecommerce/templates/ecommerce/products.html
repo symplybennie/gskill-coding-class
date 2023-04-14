@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content%}
+
+    <h1>My Products Page</h1>
+    
+    
+    <dl>
+        {% for x in groups %}
+        <dt>{{x}}</dt>
+        {% endfor %}
+
+        {% for i, b in items.items %}
+            {% for x in b %}
+            <dt>{{i}}</dt>
+            <dd>{{x}}</dd>
+            {% endfor %}
+        {% endfor %}
+    
+    </dl>
+ 
+{% endblock %}
