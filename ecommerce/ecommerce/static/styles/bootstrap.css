@@ -2531,8 +2531,8 @@ textarea.form-control-lg {
 }
 
 .input-group {
-  position: relative;
-  display: flex;
+  /* position: relative; */
+  /* display: flex; */
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
@@ -4240,6 +4240,7 @@ textarea.form-control-lg {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
+  
 }
 
 .card-title {

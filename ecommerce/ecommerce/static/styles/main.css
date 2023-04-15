@@ -3,7 +3,7 @@
 *{
   font-family: 'Quicksand', sans-serif;
 }
-.navbar-dark .nav-item .nav-link {
+/* .navbar-dark .nav-item .nav-link {
     color: #fff;
   }
   
@@ -12,43 +12,46 @@
     transition: all 0.3s ease;
     border-radius: 0.25rem;
     color: #fff;
-  }
+  } */
   
-  .fa-li {
+ /*  .fa-li {
     position: relative;
     left: 0;
-  }
-  .navbar{
+  } */
+  /* .navbar{
     background-color: blue;
     font-size: 12px;
   }
-  
-  
+
   input{
     border-radius: 50px;
-  }
-  .nav-2{
+  } */
+  /* .nav-2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .index{
+  } */
+  /* .index{ */
     /* background-image: url("/static/images/desserts.png"); */
     /* background-image:  url('../images/rice_chicken.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; */
-    width: 100%;
-    height: 300px;
-  }
- .products{
+  /*   width: 100%;
+    height: 300px; */
+  /* } */
+ /* .products{
   margin: 17rem auto;
- }
- .card img{
+ } */
+/*  .card img{
   width: 200px;
   height: 150px;
   margin: auto 0 auto;
- }
+ } */
+
+.card-body{
+  padding-left: 1rem !important;
+}
  .sign-up{
   margin-top: 5rem;
  }
