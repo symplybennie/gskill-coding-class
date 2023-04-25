@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content%}
+
+<h1>My Home Page</h1>
+
+{% for post in post %}
+<h3><a href="{% url 'posts' post.pk %}">{{post.title}}</a></h3>
+<p>{{post.post | truncatewords:20}}</p>
+<p>By {{post.author}}</p>
+{% endfor %} {% endblock %}

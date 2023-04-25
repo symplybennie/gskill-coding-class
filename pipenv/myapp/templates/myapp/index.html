@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+        <button><a href="{% url 'addmembership' %}">Add Details</a></button>
+        <h1>List of Members in the Team</h1>
+
+        
+        {% for member in object_list %}
+        <table class="table">
+        <td>{{member.firstname}} - {{member.lastname}}</td>
+        <td>Age: {{member.age}}</td>
+        </table>
+        <a href="{% url 'details' member.pk %}">More details..</a>
+        <br>
+        {% endfor %}
+        
+
+{% endblock %}

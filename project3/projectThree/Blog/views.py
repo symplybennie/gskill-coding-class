@@ -1,63 +1,29 @@
 from django.shortcuts import render
-
-posts = [
-    {
-    'author': "Gary Chapman",
-    'title': 'Post 1',
-    'date_posted': 'March 28, 2023'
-},
-    {
-    'author': "Robert Greene",
-    'title': 'Post 2',
-    'date_posted': 'March 28, 2023'
-},
-    {
-    'author': "Joyce Meyer",
-    'title': 'Post 3',
-    'date_posted': 'March 28, 2023'
-}
-]
-contacts = {
-    'location': 'Nigeria',
-    'city': 'Abuja',
-    'phone': +2348023410223
-}
-blog_news = {
-    'title': 'Election',
-    'description': '2023 Presidential Election',
-    'date_posted': 'March 30, 2023'
-}
-
-groups = [
-    {
-        'category': 'fashion',
-        'id': 1
-    },
-    {
-        'category': 'accessories',
-        'id': 2
-    },
-    {
-        'category': 'electronics',
-        'id': 3
-    }
-]
+from django.views.generic import ListView, DetailView, CreateView
+from . models import Post
 
 # Create your views here.
-def blog(request):
-    post = {"posts": posts}
-    return render(request, 'blog/blog.html', post)
+class PostView(ListView):
+    model = Post
+    template_name = 'blog/blog.html'
 
-def contact(request):
-    contact = {"contacts": contacts}
-    return render(request, 'blog/contact.html', contact)
+""" def addPostView(request):
+    posts = Post.objects.all()
+    template = 'blog/addpost.html'
+    return render(request, template, {'posts': posts}) """
 
-def news(request):
-    news = {"news": blog_news}
-    return render(request, 'blog/news.html', news)
+class addPostView(CreateView):
+    model = Post
+    template_name = 'blog/addpost.html'
+    fields = '__all__'
 
-def categories(request):
-    group = {
-        'groups': groups
+""" class singlePostView(DetailView):
+    model = Post
+    template_name = 'blog/singlepost.html' """
+    
+def singlePostView(request, pk):
+    post = Post.objects.get(id=pk)
+    context ={
+        'post': post
     }
-    return render(request, 'blog/categories.html', group)
+    return render(request, 'blog/singlepost.html', context)

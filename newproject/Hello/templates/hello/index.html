@@ -1,0 +1,15 @@
+{% extends 'hello/base.html' %}
+{% block content %}
+    
+    {% for age in ages %}
+            {% if age < 14 %}
+            
+                <p>{{ age }}</p>
+              
+            {% endif %}
+
+            {% empty %}
+            <p>Testing</p>
+    {% endfor %}
+
+{% endblock %}

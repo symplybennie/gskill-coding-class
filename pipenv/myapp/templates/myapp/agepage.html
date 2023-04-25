@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for member in object_list  %}
+    <p>{{member.age.filter(member.age < 20)}}</p>
+{% endfor %}
+
+{% endblock%}

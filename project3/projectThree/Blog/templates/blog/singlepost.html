@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p><span><a href="{% url 'blog' %}">Back to home</a></span> > {{post.title}}</p>
+<div class="container">
+
+
+    <p><b>{{post.title}}</b></p>
+    <p>written by: {{post.author}}</p>
+    <p>date: {{post.date}}</p>
+    <p>{{post.post}}</p>
+
+    </div>
+{% endblock %}

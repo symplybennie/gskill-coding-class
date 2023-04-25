@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Home Page</h1>
+<a href="{% url 'home' %}">Home</a>
+<a href="{% url 'posts' %}">Post</a>
+
+
+{% for post in object_list %}
+
+<h1><a href="{% url 'singlepost' post.pk %}">{{post.title}}</a></h1>
+<p>{{post.post|truncatewords:50 }}</p>
+<p>By {{post.author.capitalize}} | Date: April 17, 2023 </p>
+
+{% endfor %}
+{% endblock %}

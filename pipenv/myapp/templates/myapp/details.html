@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+       <h4><a href="{% url 'home' %}">Back to Members</a></h4>
+       <h4>{{member.firstname}} - {{member.lastname}}</h4>
+        <p>Age: {{member.age}}</p>
+        <p>Salary: {{member.salary}}</p>
+        <p>Date of Birth: {{member.DOB}}</p>
+        
+{% endblock %}
